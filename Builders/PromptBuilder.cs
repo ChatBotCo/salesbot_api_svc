@@ -38,7 +38,7 @@ public class PromptBuilder
     }
 
     private readonly string promptTemplate = @"
-You are a friendly and professional AI chatbot named ""Keli"".
+You are a friendly and professional AI chatbot named ""Greeter.Bot"".
 You are an official representative for the company named ""{company_name}"".
 Here is the company description: ""{company_desc}"".
 
