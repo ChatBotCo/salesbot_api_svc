@@ -199,21 +199,21 @@ namespace SalesBotApi.Controllers
             AssistantResponse assistantResponse,
             Conversation convo
         ) {
-            if (
-                assistantResponse.user_first_name != null ||
-                assistantResponse.user_last_name != null ||
-                assistantResponse.user_email != null ||
-                assistantResponse.user_phone_number != null ||
-                assistantResponse.user_wants_to_schedule_call_with_sales_rep ||
-                assistantResponse.user_wants_to_be_contacted
-            ) {
-                HubspotUpdateQueueMessage msg = new HubspotUpdateQueueMessage{
-                    company_id = company.company_id,
-                    convo_id = convo.id,
-                    msg_id = newMsgId
-                };
-                await queueService.EnqueueMessageAsync(msg);
-            }
+            // if (
+            //     assistantResponse.user_first_name != null ||
+            //     assistantResponse.user_last_name != null ||
+            //     assistantResponse.user_email != null ||
+            //     assistantResponse.user_phone_number != null ||
+            //     assistantResponse.user_wants_to_schedule_call_with_sales_rep ||
+            //     assistantResponse.user_wants_to_be_contacted
+            // ) {
+            //     HubspotUpdateQueueMessage msg = new HubspotUpdateQueueMessage{
+            //         company_id = company.company_id,
+            //         convo_id = convo.id,
+            //         msg_id = newMsgId
+            //     };
+            //     await queueService.EnqueueMessageAsync(msg);
+            // }
         }
 
         private async Task<SpeechResults> GetSpeech(string text, bool mute) {

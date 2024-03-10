@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using SalesBotApi.Models;
 using Microsoft.Azure.Cosmos;
+using System;
 
 namespace SalesBotApi.Controllers
 {
@@ -43,6 +44,10 @@ namespace SalesBotApi.Controllers
                 }
             }
             catch (CosmosException)
+            {
+                return Unauthorized();
+            }
+            catch (Exception)
             {
                 return Unauthorized();
             }

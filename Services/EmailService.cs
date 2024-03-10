@@ -38,13 +38,13 @@ public class EmailService
     ) {
             await SendEmail(
                 "hello@greet.bot", 
-                "Greeter.Bot",
+                "GreeterBot",
                 recipient_email, 
-                "New website lead from Greeter.Bot", 
+                "New website lead from GreeterBot", 
                 $@"
 Hello!
 
-Good news -- you have a new website lead from Greeter.Bot. Here is their information:
+Good news -- you have a new website lead from GreeterBot. Here is their information:
 
 First Name: {assistantResponse.user_first_name}
 Last Name: {assistantResponse.user_last_name}
@@ -55,7 +55,7 @@ Conversation history: https://app.greeter.bot/messages?convo_id={convo_id}
 Please reach out to them as soon as possible.
 
 Thank you,
-The Greeter.Bot team
+The GreeterBot team
 "
             );
         }
@@ -63,16 +63,16 @@ The Greeter.Bot team
     public async Task SendRegistrationEmail(string recipient_email) {
             await SendEmail(
                 "hello@greeter.bot", 
-                "Greeter.Bot",
+                "GreeterBot",
                 recipient_email, 
-                "Greeter.Bot registration received", 
+                "GreeterBot registration received", 
                 @"
 Hello! 
 
-Thanks for registering for a free trial account at Greeter.Bot. We will approve your account as quickly as possible (usually within 24 hours) and let you know. If you haven't heard from us within a few days, feel free to reply to this email. 
+Thanks for registering for a free trial account at GreeterBot. We will approve your account as quickly as possible (usually within 24 hours) and let you know. If you haven't heard from us within a few days, feel free to reply to this email. 
 
 Thank you,
-The Greeter.Bot team
+The GreeterBot team
 "
             );
         }
@@ -80,20 +80,20 @@ The Greeter.Bot team
     public async Task SendRegistrationApprovalEmail(string recipient_email) {
             await SendEmail(
                 "hello@greeter.bot", 
-                "Greeter.Bot",
+                "GreeterBot",
                 recipient_email, 
-                "Your Greeter.Bot registration was approved", 
+                "Your GreeterBot registration was approved", 
                 @"
 Hello! 
 
-Good news -- your Greeter.Bot registration was approved, and your account is now active. Please log in here: https://app.greeter.bot
+Good news -- your GreeterBot registration was approved, and your account is now active. Please log in here: https://app.greeter.bot
 
 See our Getting Started guide at https://docs.greeter.bot
 
 If you have any questions, feel free to reply to this email.
 
 Thank you,
-Greeter.Bot team
+GreeterBot team
 "
             );
         }
@@ -101,18 +101,18 @@ Greeter.Bot team
         public async Task SendRegistrationDeniedEmail(string recipient_email) {
             await SendEmail(
                 "hello@greeter.bot", 
-                "Greeter.Bot", 
+                "GreeterBot", 
                 recipient_email, 
-                "Your Greeter.Bot registration was declined", 
+                "Your GreeterBot registration was declined", 
                 @"
 Hello! 
 
-Unfortunately, your Greeter.Bot registration was declined. Be sure to use a company email address when registering for an account. We don't accept personal emails, e.g. Gmail, Yahoo, Hotmail, etc. See here for more information: https://docs.greeter.bot
+Unfortunately, your GreeterBot registration was declined. Be sure to use a company email address when registering for an account. We don't accept personal emails, e.g. Gmail, Yahoo, Hotmail, etc. See here for more information: https://docs.greeter.bot
 
 If you have any questions, feel free to reply to this email.
 
 Thank you,
-The Greeter.Bot team
+The GreeterBot team
 "
             );
         }
@@ -120,18 +120,18 @@ The Greeter.Bot team
         public async Task SendNewRegistrationAdminEmail() {
             await SendEmail(
                 "hello@greeter.bot", 
-                "Greeter.Bot", 
+                "GreeterBot", 
                 "james@greeter.bot,shawn@greeter.bot", 
-                "Greeter.Bot: New account registration", 
+                "GreeterBot: New account registration", 
                 @"
 Hello! 
 
-A new account has been registered in the Greeter.Bot Admin Portal.  It is waiting for approval.
+A new account has been registered in the GreeterBot Admin Portal.  It is waiting for approval.
 
 https://app.greeter.bot/users
 
 Thank you,
-The Greeter.Bot team
+The GreeterBot team
 "
             );
         }

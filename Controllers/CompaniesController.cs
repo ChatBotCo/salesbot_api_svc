@@ -131,7 +131,7 @@ namespace SalesBotApi.Controllers
                 id = Guid.NewGuid().ToString(),
                 company_id = companyId,
                 llm_model = "gpt-3.5-turbo-1106",
-                greeting = $"Hi! I'm Greeter.Bot! I can answer your questions about {newCompany.name}.",
+                greeting = $"Hi! I'm GreeterBot! I can answer your questions about {newCompany.name}.",
                 avatar_view = "headshot",
                 role_sales = true,
                 role_support = true

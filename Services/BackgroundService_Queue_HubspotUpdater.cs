@@ -31,28 +31,28 @@ public class BackgroundService_Queue_HubspotUpdater : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        while (!stoppingToken.IsCancellationRequested)
-        {
-            var result = await queueService.GetMessageAsync();
-            if (result != null)
-            {
-                QueueMessage queueMessage = result.Value.Item1;
-                HubspotUpdateQueueMessage msg = result.Value.Item2;
-                try
-                {
-                    ProcessMessage(msg);
-                    await queueService.DeleteMessageAsync(queueMessage);
-                }
-                catch (Exception ex)
-                {
-                    logger.Error("Exception");
-                    logger.Error(ex.ToString());
-                }
-            } else {
-                // When there is no message waiting then sleep between polls
-                await Task.Delay(mySettings.HubspotUpdateQueuePollRateMs, stoppingToken);
-            }
-        }
+        // while (!stoppingToken.IsCancellationRequested)
+        // {
+        //     var result = await queueService.GetMessageAsync();
+        //     if (result != null)
+        //     {
+        //         QueueMessage queueMessage = result.Value.Item1;
+        //         HubspotUpdateQueueMessage msg = result.Value.Item2;
+        //         try
+        //         {
+        //             ProcessMessage(msg);
+        //             await queueService.DeleteMessageAsync(queueMessage);
+        //         }
+        //         catch (Exception ex)
+        //         {
+        //             logger.Error("Exception");
+        //             logger.Error(ex.ToString());
+        //         }
+        //     } else {
+        //         // When there is no message waiting then sleep between polls
+        //         await Task.Delay(mySettings.HubspotUpdateQueuePollRateMs, stoppingToken);
+        //     }
+        // }
     }
 
     private async void ProcessMessage(HubspotUpdateQueueMessage msg)
