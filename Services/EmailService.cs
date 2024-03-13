@@ -69,7 +69,7 @@ The GreeterBot team
                 @"
 Hello! 
 
-Thanks for registering for a free trial account at GreeterBot. We will approve your account as quickly as possible (usually within 24 hours) and let you know. If you haven't heard from us within a few days, feel free to reply to this email. 
+Thanks for registering for a free account at GreeterBot. We will approve your account as quickly as possible (usually within 24 hours) and let you know. If you haven't heard from us within a few days, feel free to reply to this email. 
 
 Thank you,
 The GreeterBot team
@@ -88,7 +88,7 @@ Hello!
 
 Good news -- your GreeterBot registration was approved, and your account is now active. Please log in here: https://app.greeter.bot
 
-See our Getting Started guide at https://docs.greeter.bot
+See our Getting Started guide at https://help.greeter.bot
 
 If you have any questions, feel free to reply to this email.
 
@@ -107,7 +107,7 @@ GreeterBot team
                 @"
 Hello! 
 
-Unfortunately, your GreeterBot registration was declined. Be sure to use a company email address when registering for an account. We don't accept personal emails, e.g. Gmail, Yahoo, Hotmail, etc. See here for more information: https://docs.greeter.bot
+Unfortunately, your GreeterBot registration was declined. Be sure to use a company email address when registering for an account. We don't accept personal emails, e.g. Gmail, Yahoo, Hotmail, etc. See here for more information: https://help.greeter.bot
 
 If you have any questions, feel free to reply to this email.
 
